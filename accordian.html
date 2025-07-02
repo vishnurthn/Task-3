@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish CSS Accordion</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      padding: 40px;
+    }
+
+    .accordion {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .accordion-item {
+      background: #fff;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .accordion-item input {
+      display: none;
+    }
+
+    .accordion-item label {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background: #007BFF;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .accordion-item label:hover {
+      background: #0056b3;
+    }
+
+    .accordion-item label img.icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      background: #fafafa;
+      padding: 0 20px;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .accordion-item input:checked ~ .accordion-content {
+      max-height: 500px;
+      padding: 20px;
+    }
+
+    .accordion-content p {
+      margin-bottom: 10px;
+    }
+
+    .accordion-content img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc1">
+      <label for="acc1">
+        <img src="https://img.icons8.com/color/48/000000/mountain.png" class="icon" alt="Mountain Icon" />
+        Mountain Adventure
+      </label>
+      <div class="accordion-content">
+        <p>Explore the breathtaking beauty of the mountains and enjoy the peace of nature.</p>
+        <img src="https://images.unsplash.com/photo-1509587584298-bc5f23c4d34b?auto=format&fit=crop&w=800&q=80" alt="Mountain View">
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc2">
+      <label for="acc2">
+        <img src="https://img.icons8.com/color/48/000000/beach.png" class="icon" alt="Beach Icon" />
+        Beach Vibes
+      </label>
+      <div class="accordion-content">
+        <p>Relax on sandy shores and listen to the waves crash in this beach paradise.</p>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Beach">
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <input type="checkbox" id="acc3">
+      <label for="acc3">
+        <img src="https://img.icons8.com/color/48/000000/city.png" class="icon" alt="City Icon" />
+        City Lights
+      </label>
+      <div class="accordion-content">
+        <p>Discover the vibrant energy and dazzling lights of the urban world.</p>
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="City Night">
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
